@@ -6,12 +6,10 @@ namespace Exercise4
     {
         static void Main(string[] args)
         {
-            string name;
-            int birthYear;
             Console.WriteLine("Enter name: ");
-            name = Console.ReadLine();
+            string name = Console.ReadLine();
             Console.WriteLine("enter year of birth: ");
-            int.TryParse(Console.ReadLine(), out birthYear);
+            int.TryParse(Console.ReadLine(), out int birthYear);
 
             Console.WriteLine($"My name is {name} and I was born on {birthYear}.");
 
