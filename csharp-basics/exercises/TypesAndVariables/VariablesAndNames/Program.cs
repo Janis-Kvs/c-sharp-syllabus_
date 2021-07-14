@@ -6,24 +6,30 @@ namespace VariablesAndNames
     {
         private static void Main(string[] args)
         {
-            int cars, drivers, passengers, cars_not_driven, cars_driven;
-            double seats_in_a_car, carpool_capacity, average_passengers_per_car;
+            int cars;
+            int drivers;
+            int carsNotDriven;
+            int carsDriven;
+            int seatsInACar;
+            int carpoolCapacity;
+            double passengers;
+            double averagePassengersPerCar;
 
-            cars = 100; //cars
-            seats_in_a_car = 4.0; //seats in a car
-            drivers = 28; // drivers
-            passengers = 90; // passengers
-            //cars_not_driven  // free cars
-            //cars_driven ; // cars driven at the moment
-            //carpool_capacity = // carpool capacity
-            //average_passengers_per_car = // average passengers per car
+            cars = 100;
+            seatsInACar = 4;
+            drivers = 28;
+            passengers = 90.00;
+            carsNotDriven = cars - drivers;
+            carsDriven = drivers;
+            carpoolCapacity = cars * seatsInACar;
+            averagePassengersPerCar = passengers / cars;
 
             Console.WriteLine("There are " + cars + " cars available.");
             Console.WriteLine("There are only " + drivers + " drivers available.");
-            Console.WriteLine("There will be " + cars_not_driven + " empty cars today.");
-            Console.WriteLine("We can transport " + carpool_capacity + " people today.");
+            Console.WriteLine("There will be " + carsNotDriven + " empty cars today.");
+            Console.WriteLine("We can transport " + carpoolCapacity + " people today.");
             Console.WriteLine("We have " + passengers + " to carpool today.");
-            Console.WriteLine("We need to put about " + average_passengers_per_car + " in each car.");
+            Console.WriteLine("We need to put about " + averagePassengersPerCar.ToString("0.00") + " in each car.");
             Console.ReadKey();
         }
     }
