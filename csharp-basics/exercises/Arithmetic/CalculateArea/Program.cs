@@ -48,9 +48,6 @@ namespace CalculateArea
         {
 
             int userChoice;
-            
-            // keyboard input
-
             // Display the menu.
             Console.WriteLine("Geometry Calculator\n");
             Console.WriteLine("1. Calculate the Area of a Circle");
@@ -59,6 +56,7 @@ namespace CalculateArea
             Console.WriteLine("4. Quit\n");
             Console.WriteLine("Enter your choice (1-4) : ");
             var keyboard = Console.ReadKey();
+            
             // get input from user
             int.TryParse(keyboard.KeyChar.ToString(), out userChoice);
 
@@ -79,7 +77,6 @@ namespace CalculateArea
             Console.WriteLine("What is the circle's radius? ");
             //todo
             var keyboard = Console.ReadLine();
-
             decimal.TryParse(keyboard, out var radius);
 
             // Display output
@@ -92,22 +89,15 @@ namespace CalculateArea
             decimal length = 0;
             decimal width = 0;
 
-            // Get input from user
-            
-
             // Get length
             Console.WriteLine("Enter length? ");
             var keyboard = Console.ReadLine();
             decimal.TryParse(keyboard, out length);
-            //todo
-            //length = keyboard.nextDouble();
 
             // Get width
             Console.WriteLine("Enter width? ");
             keyboard = Console.ReadLine();
             decimal.TryParse(keyboard, out width);
-            //todo
-            //width = keyboard.nextDouble();
 
             // Display output
             Console.WriteLine("The rectangle's area is "
@@ -119,22 +109,15 @@ namespace CalculateArea
             decimal ground = 0;
             decimal height = 0;
 
-            // Get input from user
-            
-
             // Get the base
             Console.WriteLine("Enter length of the triangle's base? ");
             var keyboard = Console.ReadLine();
             decimal.TryParse(keyboard, out ground);
-            //todo
-            //read key value
 
             // Get the height
             Console.WriteLine("Enter triangle's height? ");
             keyboard = Console.ReadLine();
             decimal.TryParse(keyboard, out height);
-            //todo
-            //read key value
 
             // Display the triangle's area.
             Console.WriteLine("The triangle's area is "
