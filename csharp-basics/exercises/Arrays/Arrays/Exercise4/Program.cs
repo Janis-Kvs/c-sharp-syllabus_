@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise4
 {
@@ -18,13 +14,15 @@ namespace Exercise4
                 1456, 2265, 1457, 2456
             };
 
-            /*
-            fixme - check if contains number 1245 
-            for (?) {
-                ......
-                Console.WriteLine("Contains!");
+            for (int i = 0; i < myArray.Length; i++ )
+            {
+                bool result = (myArray[i] == 1245);
+                if (result)
+                {
+                    Console.WriteLine("Contains!");
+                }
             }
-            */
+            Console.ReadKey();
         }
     }
 }
