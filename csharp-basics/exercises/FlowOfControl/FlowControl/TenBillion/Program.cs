@@ -4,76 +4,70 @@ namespace TenBillion
 {
     class Program
     {
-        //TODO Write a C# program that reads an positive integer and count the number of digits the number (less than ten billion) has.
         static void Main(string[] args)
         {
-            Console.WriteLine("Input an integer number less than ten billion: ");
+            Console.Write("Input an integer number less than ten billion: ");
+            Int64.TryParse(Console.ReadLine(), out long input);
 
-            var input = Console.ReadLine();
-
-            /*
-            todo - check if Long
-            if (?) 
-            {
-                //todo - check if n is less than zero
-                if (?) 
+                if (input is long)
                 {
-                    n *= -1;
-                }
-
-                fixme
-                if (?) 
-                {
-                    Console.WriteLine("Number is greater or equals 10,000,000,000!");
-                } 
-                else 
-                {
-                    int digits = 1;
-                    if (?) 
+                    if (input < 0)
                     {
-                        digits = 2;
-                    } 
-                    else if (?) 
-                    {
-                        digits = 3;
-                    } 
-                    else if (?) 
-                    {
-                        digits = 4;
-                    } 
-                    else if (?) 
-                    {
-                        digits = 5;
-                    } 
-                    else if (?) 
-                    {
-                        digits = 6;
-                    } 
-                    else if (?) 
-                    {
-                        digits = 7;
-                    } 
-                    else if (?) 
-                    {
-                        digits = 8;
-                    } 
-                    else if (?) 
-                    {
-                        digits = 9;
-                    } 
-                    else if (?) 
-                    {
-                        digits = 10;
+                        input *= -1;
                     }
 
-                    Console.WriteLine("Number of digits in the number: " + digits);
+                    if (input > 10000000000)
+                    {
+                        Console.WriteLine("Number is greater or equals 10,000,000,000!");
+                    }
+                    else
+                    {
+                        int digits = 1;
+                        if (input < 100)
+                        {
+                            digits = 2;
+                        }
+                        else if (input < 1000)
+                        {
+                            digits = 3;
+                        }
+                        else if (input < 10000)
+                        {
+                            digits = 4;
+                        }
+                        else if (input < 100000)
+                        {
+                            digits = 5;
+                        }
+                        else if (input < 1000000)
+                        {
+                            digits = 6;
+                        }
+                        else if (input < 10000000)
+                        {
+                            digits = 7;
+                        }
+                        else if (input < 100000000)
+                        {
+                            digits = 8;
+                        }
+                        else if (input < 1000000000)
+                        {
+                            digits = 9;
+                        }
+                        else if (input < 10000000000)
+                        {
+                            digits = 10;
+                        }
+
+                        Console.WriteLine("Number of digits in the number: " + digits);
+                    }
                 }
-            } 
-            else 
-            {
-                Console.WriteLine("The number is not a long");
-            }
-            */
+                else
+                {
+                    Console.WriteLine("The number is not a long");
+                }
+            Console.ReadKey();
         }
     }
 }
