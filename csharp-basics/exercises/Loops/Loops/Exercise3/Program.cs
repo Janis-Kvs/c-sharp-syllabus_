@@ -14,12 +14,16 @@ namespace Exercise3
 
             int searchFor = Convert.ToInt16(Console.ReadLine());
             
-
             int i;
             var foundIt = false;
 
             for (i = 0; i < integers.Length; i++) {
                 //todo - search for integer - break when you have found what you searched for
+                if (searchFor == integers[i])
+                {
+                    foundIt = true;
+                    break;
+                }
             }
 
             if (foundIt) {
@@ -27,6 +31,8 @@ namespace Exercise3
             } else {
                 Console.WriteLine(searchFor + " is not in the array");
             }
+
+            Console.ReadKey();
         }
 
         static int[] RandomIntegers(int n)
