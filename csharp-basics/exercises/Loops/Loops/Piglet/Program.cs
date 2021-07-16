@@ -20,7 +20,6 @@ namespace Piglet
                     continueGame = false;
                     points = 0;
                     Console.WriteLine($"Game Over :You got {points} points.");
-
                 }
                 else
                 {
