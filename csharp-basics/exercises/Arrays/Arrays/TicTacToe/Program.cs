@@ -26,6 +26,7 @@ namespace TicTacToe
                     Console.WriteLine("\nPlease insert row and column in the right format as asked!\n");
                     continue;
                 }
+
                 int.TryParse(subsString[0], out row); // parse the input to row integer
                 int.TryParse(subsString[1], out column); // parse the input to row integer
                 if (row > 2 || row < 0 || column > 2 || column < 0)
@@ -76,9 +77,13 @@ namespace TicTacToe
                         filledFields++;
                     
             }
+
             if (filledFields == 9)
+            {
                 tie = true;
+            }
         }
+                
 
         private static void IsWin()
         {

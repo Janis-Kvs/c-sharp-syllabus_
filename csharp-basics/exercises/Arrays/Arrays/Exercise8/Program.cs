@@ -11,16 +11,16 @@ namespace Exercise8
             "orange"
         };
 
-        private static Random random = new Random();
-        private static string randomWord = words[random.Next(0, words.Length)];
-        private static string[] guessingWord = new string[randomWord.Length];
-        private static int numOfGuesses = randomWord.Length + 6;
-        private static char[] missedLetters = new char[numOfGuesses];
-        private static int missedLetterIndex = 0;
+        private static Random _random = new Random();
+        private static string _randomWord = words[_random.Next(0, words.Length)];
+        private static string[] _guessingWord = new string[_randomWord.Length];
+        private static int _numOfGuesses = _randomWord.Length + 6;
+        private static char[] _missedLetters = new char[_numOfGuesses];
+        private static int _missedLetterIndex = 0;
 
         static void Main(string[] args)
         {
-            Console.WriteLine(randomWord);
+            Console.WriteLine(_randomWord);
             InitialSetup();
             StartGame();
             if (IsWin())
@@ -43,11 +43,11 @@ namespace Exercise8
 
         public static void RestartGame()
         {
-            randomWord = words[random.Next(0, words.Length)];
-            guessingWord = new string[randomWord.Length];
-            numOfGuesses = randomWord.Length + 6;
-            missedLetters = new char[numOfGuesses];
-            missedLetterIndex = 0;
+            _randomWord = words[_random.Next(0, words.Length)];
+            _guessingWord = new string[_randomWord.Length];
+            _numOfGuesses = _randomWord.Length + 6;
+            _missedLetters = new char[_numOfGuesses];
+            _missedLetterIndex = 0;
             InitialSetup();
             StartGame();
         }
@@ -60,15 +60,12 @@ namespace Exercise8
                 DrawGame();
                 IsWin();
                 ++i;
-            } while (i < numOfGuesses && !IsWin());
+            } while (i < _numOfGuesses && !IsWin());
         }
 
         public static bool IsWin()
         {
-            if (String.Concat(guessingWord) == randomWord)
-            {
-                return true;
-            }
+            if (String.Concat(_guessingWord) == _randomWord) return true;
             return false;
         }
 
@@ -80,24 +77,24 @@ namespace Exercise8
             Console.WriteLine("\n-=-=-=-=-=-=-=-=-=-=-c=-=-=-");
             Console.Write("Word: ");
 
-            for (int j = 0; j < randomWord.Length; j++)
+            for (int j = 0; j < _randomWord.Length; j++)
             {
-                if (randomWord[j] == letter)
+                if (_randomWord[j] == letter)
                 {
-                    guessingWord[j] = Char.ToString(randomWord[j]);
+                    _guessingWord[j] = Char.ToString(_randomWord[j]);
                 }
 
-                Console.Write(guessingWord[j] + " ");
+                Console.Write(_guessingWord[j] + " ");
             }
 
-            if (!randomWord.Contains(letter))
+            if (!_randomWord.Contains(letter))
             {
-                missedLetters[missedLetterIndex] = letter;
-                missedLetterIndex++;
+                _missedLetters[_missedLetterIndex] = letter;
+                _missedLetterIndex++;
             }
 
             Console.WriteLine();
-            Console.WriteLine($"Misses: " + String.Join(' ', missedLetters));
+            Console.WriteLine($"Misses: " + String.Join(' ', _missedLetters));
             Console.WriteLine($"Guess: {letter}");
             Console.WriteLine();
         }
@@ -107,10 +104,10 @@ namespace Exercise8
             Console.WriteLine();
             Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-");
             Console.Write("Word: ");
-            for (int i = 0; i < randomWord.Length; i++)
+            for (int i = 0; i < _randomWord.Length; i++)
             {
-                guessingWord[i] = "_ ";
-                Console.Write(guessingWord[i]);
+                _guessingWord[i] = "_ ";
+                Console.Write(_guessingWord[i]);
             }
             Console.WriteLine();
             Console.WriteLine($"Misses: ");
