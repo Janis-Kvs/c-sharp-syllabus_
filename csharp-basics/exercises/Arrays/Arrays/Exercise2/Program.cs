@@ -15,12 +15,10 @@ namespace Exercise2
             Console.WriteLine("Please enter a max number");
             int maxNumber = int.Parse(Console.ReadLine());
 
-            /*
-            fixme
-            for (........) {
-            ........
+            for (int i = minNumber; i <= maxNumber; i++)
+            {
+                sum += myArray[i - 1];
             }
-            */
 
             Console.WriteLine("The sum is " + sum);
             Console.ReadKey();
