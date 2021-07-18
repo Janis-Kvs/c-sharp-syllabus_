@@ -4,7 +4,7 @@ namespace Exercise1
 {
     class Program
     {
-        //todo - write a program in C# to display the first 10 natural numbers
+        //The program displays the first 10 natural numbers.
         static void Main(string[] args)
         {
             int i;

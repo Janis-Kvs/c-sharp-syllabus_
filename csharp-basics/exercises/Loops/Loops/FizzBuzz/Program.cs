@@ -18,6 +18,7 @@ namespace FizzBuzz
                 else if (i % 3 == 0)
                     Console.Write("Fizz ");
                 else Console.Write(i + " ");
+                
                 if (i % 20 == 0)
                     Console.WriteLine();
             }

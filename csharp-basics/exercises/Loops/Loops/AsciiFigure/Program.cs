@@ -20,7 +20,6 @@ namespace AsciiFigure
                 symbol += "********";
                 i++;
             }
-
         }
     }
 }
