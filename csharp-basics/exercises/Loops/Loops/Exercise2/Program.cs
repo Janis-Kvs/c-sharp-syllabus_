@@ -4,23 +4,19 @@ namespace Exercise2
 {
     class Program
     {
+        //todo - complete loop to multiply i with itself n times, it is NOT allowed to use Math.Pow()
         static void Main(string[] args)
         {
-            int i, n;
-            
-            Console.WriteLine("Input number of terms : ");
+            int i;
 
-            n = Convert.ToInt32(Console.ReadLine());
-            /*
-            todo - complete loop to multiply i with itself n times, it is NOT allowed to use Math.Pow()
-            */
+            Console.WriteLine("Input number of terms : ");
+            var n = Convert.ToInt32(Console.ReadLine());
+
             for (i = 0; i < n; i++)
             {
                 Console.WriteLine(Pow(i,n));
             }
-
             Console.ReadKey();
-
         }
 
         static int Pow(int number, int times)
@@ -30,7 +26,6 @@ namespace Exercise2
             {
                 a *= number;
             }
-
             return a;
         }
     }
