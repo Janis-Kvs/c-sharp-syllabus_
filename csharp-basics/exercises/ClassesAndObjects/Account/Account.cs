@@ -7,28 +7,23 @@ namespace Account
     {
         private string _name;
         private double _balance;
-
         public Account(string name, double balance)
         {
             _name = name;
             _balance = balance;
         }
-
         public double Withdrawal(double amount)
         {
             return _balance -= amount;
         }
-
         public double Deposit(double amount)
         {
             return _balance += amount;
         }
-
         public double Balance()
         {
             return _balance;
         }
-
         public override string ToString()
         {
             CultureInfo newCulture = new CultureInfo("en-US");

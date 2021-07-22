@@ -38,14 +38,12 @@ namespace Account
 
             Console.ReadKey();
         }
-
         public static void YourFirstAccount()
         {
             Account testAccount = new Account("First account name", 100.00);
             testAccount.Deposit(20);
             Console.WriteLine(testAccount.ToString());
         }
-
         public static void YourFirstMoneyTransfer()
         {
             Account mattsAccount = new Account("Matt's account", 1000.00);
@@ -55,7 +53,6 @@ namespace Account
             Console.WriteLine(mattsAccount.ToString());
             Console.WriteLine(myAccount.ToString());
         }
-
         public static void Transfer(Account from, Account to, double howMuch)
         {
             from.Withdrawal(howMuch);

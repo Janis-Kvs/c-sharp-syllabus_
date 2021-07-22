@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Globalization;
-
-namespace Exercise8
+﻿namespace Exercise8
 {
     class SavingsAccount
     {
@@ -14,7 +7,6 @@ namespace Exercise8
         private decimal _totalDeposited;
         private decimal _totalWithdrawn;
         private decimal _totalEarned;
-
         public SavingsAccount(int startBalance)
         {
             _balance = startBalance;
@@ -22,18 +14,15 @@ namespace Exercise8
             _totalWithdrawn = 0;
             _totalEarned = 0;
         }
-
         public int Rate
         {
             get { return _rate; }
             set { _rate = value; }
         }
-
         public decimal TotalEarned
         {
             get { return _totalEarned; }
         }
-
         public decimal TotalWithdrawn
         {
             get { return _totalWithdrawn; }
@@ -46,21 +35,16 @@ namespace Exercise8
         {
             get { return _balance; }
         }
-
-
         public void WithdrawMoney(int withdrawAmount)
         {
             _balance -= withdrawAmount;
             _totalWithdrawn += withdrawAmount;
-
         }
-
         public void AddDeposit(int depositAmount)
         {
             _balance += depositAmount;
             _totalDeposited += depositAmount;
         }
-
         public void AddMonthlyInterest()
         {
             decimal interestRate = _balance * _rate / 12;

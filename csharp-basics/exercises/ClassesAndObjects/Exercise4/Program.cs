@@ -15,7 +15,6 @@ namespace Exercise4
             {
                 Console.WriteLine($"Movie title: {movie.GetTitle()}, movie studio: {movie.GetStudio()}, movie rating:{movie.GetRating()}");
             }
-           
             
             Console.WriteLine("Movies with rating \"PG\"");
             Movie[] newMovies = Movie.GetPg(movies);

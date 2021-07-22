@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Exercise7
 {
     class DogTest
     {
-
         private static  List<Dog> _dogs = new List<Dog>();
-
         public static void Main(string[] args)
         {
             string[,] dogArray1 =
@@ -45,10 +42,8 @@ namespace Exercise7
 
             Console.WriteLine("The fathers name of Coco is "+ FindDog("Coco").FathersName());
             Console.WriteLine("The fathers name of Coco is " + FindDog("Sparky").FathersName());
-
             Console.WriteLine("Coco has the same mother as Rocky: " + FindDog("Coco").HasSameMotherAs(FindDog("Rocky")));
         }
-
         public static Dog FindDog(string name)
         {
             foreach (Dog dog in _dogs)
@@ -56,9 +51,7 @@ namespace Exercise7
                 if (dog.Name == name)
                     return dog;
             }
-
             return null;
         }
-
     }
 }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VideoStore
 {
@@ -20,8 +16,6 @@ namespace VideoStore
                 Console.WriteLine("Choose 2 to rent video (as user)");
                 Console.WriteLine("Choose 3 to return video (as user)");
                 Console.WriteLine("Choose 4 to list inventory");
-
-                
                 int n = Convert.ToByte(Console.ReadLine());
 
                 switch (n)
@@ -45,12 +39,10 @@ namespace VideoStore
                 }
             }
         }
-
         private static void ListInventory()
         {
             _videoStore.ListInventory();
         }
-
         private static void FillVideoStore()
         {
             for (var i = 0; i < _countOfMovies; i++)
@@ -65,14 +57,12 @@ namespace VideoStore
                 _videoStore.TakeUsersRating(rating, movieName);
             }
         }
-
         private static void RentVideo()
         {
             Console.WriteLine("Enter movie name");
             string movieName = Console.ReadLine();
             _videoStore.Checkout(movieName);
         }
-
         private static void ReturnVideo()
         {
             Console.WriteLine("Enter movie name");

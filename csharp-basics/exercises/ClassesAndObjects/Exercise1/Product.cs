@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise1
 {
@@ -16,9 +12,7 @@ namespace Exercise1
             _name = name;
             _priceAtStart = priceAtStart;
             _amountAtStart = amountAtStart;
-
         }
-
         public void PrintProduct()
         {
             Console.WriteLine($"{_name}, price: {_priceAtStart} EUR, amount: {_amountAtStart} units");

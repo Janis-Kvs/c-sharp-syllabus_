@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace BankAccount
 {
     class Program

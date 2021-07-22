@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
+﻿using System.Globalization;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace BankAccount
 {
@@ -13,13 +7,11 @@ namespace BankAccount
     {
         private string _name;
         private decimal _balance;
-
         public Account(string name, decimal balance)
         {
             _name = name;
             _balance = balance;
         }
-
         public string ShowUserNameAndBalance()
         {
             CultureInfo newCulture = new CultureInfo("en-US");

@@ -13,7 +13,6 @@ namespace Exercise9
             Console.WriteLine("(" + p1.X + ", " + p1.Y + ")");
             Console.WriteLine("(" + p2.X + ", " + p2.Y + ")");
         }
-        
         static void SwapPoints(Point p1, Point p2)
         {
             int tempX = p1.X;
