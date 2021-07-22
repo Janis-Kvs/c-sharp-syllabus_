@@ -1,39 +1,35 @@
-﻿namespace Account
+﻿using System.Globalization;
+using System.Threading;
+
+namespace Account
 {
     class Account
     {
         private string _name;
-        private double _money;
-
-        public Account(string v1, double v2)
+        private double _balance;
+        public Account(string name, double balance)
         {
-            
+            _name = name;
+            _balance = balance;
         }
-
-        public double withdrawal(double i)
+        public double Withdrawal(double amount)
         {
-            return i;
+            return _balance -= amount;
         }
-
-        public void deposit(double i)
+        public double Deposit(double amount)
         {
-            
+            return _balance += amount;
         }
-
-        public double balance()
+        public double Balance()
         {
-            return _money;
+            return _balance;
         }
-
         public override string ToString()
         {
-            return $"{_name}: {_money}";
-        }
-
-        public string Name
-        {
-            get => _name;
-            set => _name = value;
+            CultureInfo newCulture = new CultureInfo("en-US");
+            newCulture.NumberFormat.CurrencyNegativePattern = 1;
+            Thread.CurrentThread.CurrentCulture = newCulture;
+            return $"{_name}: {_balance.ToString("C2")}";
         }
     }
 }

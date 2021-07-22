@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FuelConsumptionCalculator
 {
@@ -10,30 +7,46 @@ namespace FuelConsumptionCalculator
     {
         private static void Main(string[] args)
         {
-            int startKilometers;
-            int liters;
-            
-            Console.WriteLine();
+            List<Car> cars = new List<Car>();
+            Console.WriteLine("How many cars do you have?");
+            int carCount = int.Parse(Console.ReadLine());
 
-            Car car = new Car(0);
-            Car car1 = new Car(0);
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < carCount; i++)
             {
-                Console.Write("Enter first reading: ");
-                startKilometers = Convert.ToInt32(Console.ReadLine());    
-                Console.Write("Enter liters reading: ");
-                liters = Convert.ToInt32(Console.ReadLine());
-                car.FillUp(startKilometers, liters);
+                Console.WriteLine($"Enter car number {i + 1} odometer start reading: ");
+                int odometerStart = int.Parse(Console.ReadLine());
                 
-                Console.Write("Enter first reading: ");
-                startKilometers = Convert.ToInt32(Console.ReadLine());    
-                Console.Write("Enter liters reading: ");
-                liters = Convert.ToInt32(Console.ReadLine());
-                car1.FillUp(startKilometers, liters);
-            }
+                cars.Add(new Car(odometerStart));
 
-            Console.WriteLine("Kilometers per liter are " + car.CalculateConsumption() + " gasHog:" + car.GasHog());
-            Console.WriteLine("Car1 Kilometers per liter are " + car1.CalculateConsumption()+ " economyCar:" + car.EconomyCar());
+                Console.WriteLine("How many fillups did you have?");
+                int fuelCount = int.Parse(Console.ReadLine());
+
+                for (int j = 0; j < fuelCount; j++)
+                {
+                    Console.WriteLine($"Enter car number {i + 1} odometer end reading for fillup number {j + 1}: ");
+                    int odometerEnd = int.Parse(Console.ReadLine());
+                    Console.WriteLine($"Enter car number {i + 1} liters consumed between odometer start and end readings: ");
+                    int liters = int.Parse(Console.ReadLine());
+                    cars[i].FillUp(odometerEnd, liters);
+                    
+                    Console.WriteLine($"Car {i} fuel consumption is {cars[i].CalculateConsumption()} l / 100 km");
+
+                    if (cars[i].GasHog())
+                    {
+                        Console.WriteLine($"Car {i + 1} is a gas hog");
+                    }
+                    else if (cars[i].EconomyCar())
+                    {
+                        Console.WriteLine($"Car {i + 1} is an economy car");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Car {i + 1} has an average fuel consumption");
+                    }
+
+                    cars[i].startKilometers = odometerEnd;
+                }
+            }
             Console.ReadKey();
         }
     }
