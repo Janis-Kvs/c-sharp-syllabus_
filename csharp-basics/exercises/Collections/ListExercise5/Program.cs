@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ListExercise5
 {
@@ -20,10 +17,9 @@ namespace ListExercise5
             };
 
             Console.WriteLine(string.Join(",", colors));
-
-            //TODO: Change the third element with "Yellow"
-
+            colors[2] = "Yellow";
             Console.WriteLine(string.Join(",", colors));
+            Console.ReadKey();
         }
     }
 }
