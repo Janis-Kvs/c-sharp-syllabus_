@@ -10,13 +10,19 @@ namespace ListExercise1
     {
         private static void Main(string[] args)
         {
-            //TODO: Write a C# program to create a new list, add some elements (string) and print out the collection.
-            var colors = new List<string>();
-
-            //TODO: Add 5 colors to list
+            var colors = new List<string>() {"blue", "green", "purple"};
             colors.Add("Red");
+            colors.Add("black");
+            colors.Add("White");
+            colors.Add("gray");
+            colors.Add("blue");
 
-            Console.WriteLine();
+            foreach (string color in colors)
+            {
+                Console.WriteLine(color);
+            }
+
+            Console.ReadKey();
         }
     }
 }

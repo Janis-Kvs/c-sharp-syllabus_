@@ -1,32 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise1
 {
     class Program
     {
-        /**
-           * Origination:
-           * Audi -> Germany
-           * BMW -> Germany
-           * Honda -> Japan
-           * Mercedes -> Germany
-           * VolksWagen -> Germany
-           * Tesla -> USA
-           */
-
         private static void Main(string[] args)
         {
             string[] array = { "Audi", "BMW", "Honda", "Mercedes", "VolksWagen", "Mercedes", "Tesla" };
 
-            //todo - replace array with an List and print out the results
+            List<string> list = new List<string>(array);
+            foreach (string el in list)
+            {
+                Console.WriteLine(el);
+            }
 
-            //todo - replace array with a HashSet and print out the results
+            Console.WriteLine();
+            HashSet<string> hashSet = new HashSet<string>(array);
+            foreach (string el in hashSet)
+            {
+                Console.WriteLine(el);
+            }
 
-            //todo - replace array with a Dictionary (use brand as key and origination as value) and print out the results
+            Console.WriteLine();
+            Console.WriteLine("Origination:");
+            Dictionary<string, string> dictionary = new Dictionary<string, string>();
+            dictionary.Add("Audi", "Germany");
+            dictionary.Add("BMW", "Germany");
+            dictionary.Add("Honda", "Japan");
+            dictionary.Add("Mercedes", "Germany");
+            dictionary.Add("VolksWagen", "Germany");
+            dictionary.Add("Tesla", "USA");
+            foreach (KeyValuePair<string, string> kvp in dictionary)
+            {
+                Console.WriteLine($"{kvp.Key} -> {kvp.Value}");
+            }
+
+            Console.ReadKey();
         }
     }
 }
