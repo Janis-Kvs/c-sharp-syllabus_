@@ -7,11 +7,13 @@ namespace PhoneBook
     {
         private SortedDictionary<string, int> _phoneDictionary;
 
-        public PhoneDirectory() {
+        public PhoneDirectory() 
+        {
             _phoneDictionary = new SortedDictionary<string, int>();
         }
 
-        public int? GetNumber(string name) {
+        public int? GetNumber(string name) 
+        {
             foreach (var phone in _phoneDictionary)
             {
                 if (_phoneDictionary.ContainsKey(name))
