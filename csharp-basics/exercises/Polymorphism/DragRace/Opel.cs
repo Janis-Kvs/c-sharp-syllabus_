@@ -1,22 +1,24 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace DragRace
 {
-    public class Audi : ICar
+    class Opel : ICar
     {
         private int _currentSpeed = 0;
 
-        public void SpeedUp() 
+        public void SpeedUp()
         {
             _currentSpeed++;
         }
 
-        public void SlowDown() 
+        public void SlowDown()
         {
             _currentSpeed--;
         }
 
-        public int ShowCurrentSpeed() 
+        public int ShowCurrentSpeed()
         {
             return _currentSpeed;
         }
