@@ -2,23 +2,23 @@ using System;
 
 namespace DragRace
 {
-    public class Tesla
+    public class Tesla : ICar
     {
-        private int currentSpeed = 0;
+        private int _currentSpeed = 0;
 
         public void SpeedUp() 
         {
-            currentSpeed;
+            _currentSpeed++;
         }
 
         public void SlowDown() 
         {
-            currentSpeed;
+            _currentSpeed--;
         }
 
-        public string ShowCurrentSpeed() 
+        public int ShowCurrentSpeed() 
         {
-            return currentSpeed.ToString();
+            return _currentSpeed;
         }
 
         public void StartEngine() 
