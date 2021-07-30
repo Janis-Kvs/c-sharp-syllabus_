@@ -24,13 +24,13 @@ namespace AdApp
 
         public override string ToString()
         {
-            string res = "";
-            foreach (var el in _campaign)
+            string addCosts = "";
+            foreach (var advert in _campaign)
             {
-                res += el;
+                addCosts += advert;
             }
 
-            return $"Advert Campaign {res} \nTotal Cost = {GetCost()}";
+            return $"Advert Campaign {addCosts} \nTotal Cost = {GetCost()}";
         }
     }
 }
