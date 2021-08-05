@@ -13,15 +13,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise1", "Exercise1\Exer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckOddEven", "CheckOddEven\CheckOddEven.csproj", "{16B42E5A-DF5F-4578-8DDC-478FD8D98140}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product1ToN", "Product1ToN\Product1ToN.csproj", "{65DBB2ED-198F-4ABA-98BA-7AEC07295D41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product1ToN", "Product1ToN\Product1ToN.csproj", "{65DBB2ED-198F-4ABA-98BA-7AEC07295D41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise5", "Exercise5\Exercise5.csproj", "{758C6029-18EB-49CE-B5BE-7E64B6139624}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise5", "Exercise5\Exercise5.csproj", "{758C6029-18EB-49CE-B5BE-7E64B6139624}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CozaLozaWoza", "CozaLozaWoza\CozaLozaWoza.csproj", "{36FA43CC-0E67-45C7-9068-94A69B69C4AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CozaLozaWoza", "CozaLozaWoza\CozaLozaWoza.csproj", "{36FA43CC-0E67-45C7-9068-94A69B69C4AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise8", "Exercise8\Exercise8.csproj", "{F36CB2A0-FF49-4281-ABF6-66E925C3A64A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise8", "Exercise8\Exercise8.csproj", "{F36CB2A0-FF49-4281-ABF6-66E925C3A64A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise9", "Exercise9\Exercise9.csproj", "{445696B5-1ADC-4EEE-9EFA-1F5E943912F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise9", "Exercise9\Exercise9.csproj", "{445696B5-1ADC-4EEE-9EFA-1F5E943912F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckOddEven.Tests", "CheckOddEven.Tests\CheckOddEven.Tests.csproj", "{F48AA853-26F9-4510-87EB-19F7D025D921}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise1.Testss", "Exercise1.Testss\Exercise1.Testss.csproj", "{B7FA2690-52A6-4415-9CF2-2B00BDAD8FCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{445696B5-1ADC-4EEE-9EFA-1F5E943912F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{445696B5-1ADC-4EEE-9EFA-1F5E943912F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{445696B5-1ADC-4EEE-9EFA-1F5E943912F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F48AA853-26F9-4510-87EB-19F7D025D921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F48AA853-26F9-4510-87EB-19F7D025D921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F48AA853-26F9-4510-87EB-19F7D025D921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F48AA853-26F9-4510-87EB-19F7D025D921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7FA2690-52A6-4415-9CF2-2B00BDAD8FCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7FA2690-52A6-4415-9CF2-2B00BDAD8FCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7FA2690-52A6-4415-9CF2-2B00BDAD8FCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7FA2690-52A6-4415-9CF2-2B00BDAD8FCD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
