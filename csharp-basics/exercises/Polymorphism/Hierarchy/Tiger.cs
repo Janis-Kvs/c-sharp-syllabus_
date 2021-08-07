@@ -4,18 +4,18 @@ using System.Text;
 
 namespace Hierarchy
 {
-    class Tiger : Felime
+    public class Tiger : Felime
     {
         public Tiger(string animalName, string animalType, double animalWeight, string livingRegion) : base(animalName, animalType, animalWeight, livingRegion)
         {
         }
 
-        public override void MakeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("ROAAR!!!");
+            return "ROAAR!!!";
         }
 
-        public override void Eat(Food food)
+        public override int Eat(Food food)
         {
             if (food.ToString() == "Meat")
             {
@@ -23,8 +23,10 @@ namespace Hierarchy
             }
             else
             {
-                Console.WriteLine($"{_animalType} are not eating that type of food!");
+                throw new ArgumentException($"{_animalType} are not eating that type of food!");
             }
+
+            return _foodEaten;
         }
 
         public override string ToString()

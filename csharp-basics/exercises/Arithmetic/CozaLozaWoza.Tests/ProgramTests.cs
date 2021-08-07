@@ -7,7 +7,7 @@ namespace CozaLozaWoza.Tests
     {
         [DataTestMethod]
         [DataRow(105, "CozaLozaWoza ")]
-        [DataRow(15, "CozaLoza ")]
+        [DataRow(15, "CozaLoza ")]  
         [DataRow(35, "LozaWoza ")]
         [DataRow(21, "CozaWoza ")]
         [DataRow(10, "Loza ")]

@@ -36,21 +36,12 @@ namespace Hierarchy
                     animals.Add(new Mouse(answer[1], answer[0], double.Parse(answer[2], CultureInfo.InvariantCulture), answer[3]));
                 }
 
-                animals[i].MakeSound();
+                Console.WriteLine(animals[i].MakeSound());
                 Console.WriteLine("Please provide the food (vegetable or meat) and quantity for the animal.\n" +
                                   "Separate the words with whitespaces");
                 string[] answer2 = Console.ReadLine().Split(' ');
-
-                if (answer2[0].ToLower() == "vegetable")
-                {
-                    Food food = new Vegetable(int.Parse(answer2[1]));
-                    animals[i].Eat(food);
-                } 
-                else if (answer2[0].ToLower() == "meat")
-                {
-                    Food food = new Meat(int.Parse(answer2[1]));
-                    animals[i].Eat(food);
-                }
+                
+                EatFood(answer2, animals, i);
 
                 Console.WriteLine(animals[i]);
                 i++;
@@ -60,6 +51,20 @@ namespace Hierarchy
 
             string res = String.Join(", ", animals);
             Console.WriteLine(res);
+        }
+
+        public static void EatFood(string[] answer2, List<Animal> animals, int i)
+        {
+            if (answer2[0].ToLower() == "vegetable")
+            {
+                Food food = new Vegetable(int.Parse(answer2[1]));
+                animals[i].Eat(food);
+            }
+            else if (answer2[0].ToLower() == "meat")
+            {
+                Food food = new Meat(int.Parse(answer2[1]));
+                animals[i].Eat(food);
+            }
         }
     }
 }

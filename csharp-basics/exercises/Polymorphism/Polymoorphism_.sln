@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdApp", "AdApp\AdApp.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hierarchy", "Hierarchy\Hierarchy.csproj", "{FD5FEE36-09D2-4231-A684-85DC28FBC13E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragRace.Tests", "DragRace.Tests\DragRace.Tests.csproj", "{4DF0CDD8-EE59-4AF7-8A60-7BFE1B7FED06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hierarchy.Tests", "Hierarchy.Tests\Hierarchy.Tests.csproj", "{3DBFD2D0-5E93-44D1-A99F-72A98A3476F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{FD5FEE36-09D2-4231-A684-85DC28FBC13E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD5FEE36-09D2-4231-A684-85DC28FBC13E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD5FEE36-09D2-4231-A684-85DC28FBC13E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DF0CDD8-EE59-4AF7-8A60-7BFE1B7FED06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DF0CDD8-EE59-4AF7-8A60-7BFE1B7FED06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DF0CDD8-EE59-4AF7-8A60-7BFE1B7FED06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DF0CDD8-EE59-4AF7-8A60-7BFE1B7FED06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DBFD2D0-5E93-44D1-A99F-72A98A3476F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DBFD2D0-5E93-44D1-A99F-72A98A3476F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DBFD2D0-5E93-44D1-A99F-72A98A3476F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DBFD2D0-5E93-44D1-A99F-72A98A3476F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
