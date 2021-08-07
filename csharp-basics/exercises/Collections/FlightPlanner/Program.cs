@@ -8,14 +8,13 @@ using System.Threading.Tasks;
 
 namespace FlightPlanner
 {
-    class Program
+    public class Program
     {
-        private const string Path = "../../flights.txt";
-        static Dictionary<string, string> flightDictionary = ConvertPathToDictonary();
-
         private static void Main(string[] args)
         {
-            
+            string Path = "../../flights.txt";
+            string[] flights = File.ReadAllLines(Path);
+            var flightDictionary = ConvertPathToDictionary(flights);
             List<string> flightCities = new List<string>();
 
             Console.WriteLine("What would you like to do?");
@@ -25,7 +24,7 @@ namespace FlightPlanner
 
             if (answer == "1")
             {
-                DisplayDestinations();
+                Console.WriteLine(DisplayDestinations(flightDictionary));
             }
             else return;
             
@@ -34,8 +33,9 @@ namespace FlightPlanner
 
             if (answer == "1")
             {
-                DisplayDepartures();
-            } else return;
+                Console.WriteLine(DisplayDepartures(flightDictionary));
+            } 
+            else return;
 
             Console.WriteLine("\nDeparture city: ");
             answer = Console.ReadLine();
@@ -64,12 +64,11 @@ namespace FlightPlanner
             Console.ReadKey();
         }
 
-        public static Dictionary<string, string> ConvertPathToDictonary()
+        public static Dictionary<string, string> ConvertPathToDictionary(string[] flights)
         {
-            string[] flights = File.ReadAllLines(Path);
-            string[] stringSeparators = { "->" };
             Dictionary<string, string> flightDictionary = new Dictionary<string, string>();
-            List<string> flightCities = new List<string>();
+            
+            string[] stringSeparators = { "->" };
 
             foreach (var s in flights)
             {
@@ -94,20 +93,26 @@ namespace FlightPlanner
             return flightDictionary;
         }
 
-        public static void DisplayDestinations()
+        public static string DisplayDestinations(Dictionary<string, string> flightDictionary)
         {
+            string destinations = "";
             foreach (var element in flightDictionary)
             {
-                Console.WriteLine("Departure: " + element.Key + ". Destination: " + element.Value);
+                destinations += "Departure: " + element.Key + ". Destination: " + element.Value+"\n";
             }
+
+            return destinations;
         }
 
-        public static void DisplayDepartures()
+        public static string DisplayDepartures(Dictionary<string, string> flightDictionary)
         {
+            string departures = "";
             foreach (var element in flightDictionary)
             {
-                Console.WriteLine("Departure:" + element.Key);
+                departures += "Departure: " + element.Key+".\n";
             }
+
+            return departures;
         }
     }
 }

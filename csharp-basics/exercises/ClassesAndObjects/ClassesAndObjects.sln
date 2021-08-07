@@ -25,15 +25,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise3_", "Exercise3_\Ex
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise4", "Exercise4\Exercise4.csproj", "{A3C23870-DAC5-476F-83B4-A20DC2134832}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise5", "Exercise5\Exercise5.csproj", "{0C5F3EEC-25B4-4444-A487-CDD4B3E034BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise5", "Exercise5\Exercise5.csproj", "{0C5F3EEC-25B4-4444-A487-CDD4B3E034BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTest", "DateTest\DateTest.csproj", "{4EC1169A-7913-4F48-8ACC-06E61AEDCDE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise5.Tests", "DateTest\Exercise5.Tests.csproj", "{4EC1169A-7913-4F48-8ACC-06E61AEDCDE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise7", "Exercise7\Exercise7.csproj", "{F5089526-79AF-4220-8458-0A073D85CE18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise7", "Exercise7\Exercise7.csproj", "{F5089526-79AF-4220-8458-0A073D85CE18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise8", "Exercise8\Exercise8.csproj", "{7311E27C-F736-4647-941C-41F8B6768DE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise8", "Exercise8\Exercise8.csproj", "{7311E27C-F736-4647-941C-41F8B6768DE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise9", "Exercise9\Exercise9.csproj", "{4A9BD99C-CEC6-41E9-8CF0-AAF69C8D25B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise9", "Exercise9\Exercise9.csproj", "{4A9BD99C-CEC6-41E9-8CF0-AAF69C8D25B7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise1.Tests", "Exercise1.Tests\Exercise1.Tests.csproj", "{C8903228-C3BB-4E76-9A8D-EABEBDE88C71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account.Tests", "Account.Tests\Account.Tests.csproj", "{FD935EF3-2335-4640-B165-77DE8BECC8A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +109,14 @@ Global
 		{4A9BD99C-CEC6-41E9-8CF0-AAF69C8D25B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A9BD99C-CEC6-41E9-8CF0-AAF69C8D25B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A9BD99C-CEC6-41E9-8CF0-AAF69C8D25B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8903228-C3BB-4E76-9A8D-EABEBDE88C71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8903228-C3BB-4E76-9A8D-EABEBDE88C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8903228-C3BB-4E76-9A8D-EABEBDE88C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8903228-C3BB-4E76-9A8D-EABEBDE88C71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD935EF3-2335-4640-B165-77DE8BECC8A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD935EF3-2335-4640-B165-77DE8BECC8A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD935EF3-2335-4640-B165-77DE8BECC8A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD935EF3-2335-4640-B165-77DE8BECC8A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -25,14 +25,15 @@ namespace PhoneBook
             return null;
         }
 
-        public int? ListNumbers()
+        public string ListNumbers()
         {
+            string list = "";
             foreach (KeyValuePair<string, int> phone in _phoneDictionary)
             {
-                Console.WriteLine($"Name: {phone.Key}, Phone number: {phone.Value}");
+               list+= $"Name: {phone.Key}, Phone number: {phone.Value}\n";
             }
 
-            return null;
+            return list;
         }
 
         public void PutNumber(string name, string number) 

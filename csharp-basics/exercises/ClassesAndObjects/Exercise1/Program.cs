@@ -14,7 +14,7 @@ namespace Exercise1
 
             foreach (Product product in _products)
             {
-                product.PrintProduct();
+                Console.WriteLine(product.PrintProduct());
 
                 Console.WriteLine("What is the new amount of product?");
                 string newAmount = Console.ReadLine();

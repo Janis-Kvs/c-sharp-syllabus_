@@ -19,7 +19,7 @@ namespace Phonebook
             phoneDirectory.PutNumber("Zane", "22246555");
 
             Console.WriteLine(phoneDirectory.GetNumber("Evija"));
-            phoneDirectory.ListNumbers();
+            Console.WriteLine(phoneDirectory.ListNumbers());
 
             Console.ReadKey();
         }

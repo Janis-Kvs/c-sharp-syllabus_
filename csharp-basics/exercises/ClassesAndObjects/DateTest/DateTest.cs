@@ -10,18 +10,16 @@ namespace DateTest
         {
         }
 
-        private Date _target;
-
         [Test]
         public void DisplayDate_day21month7year2021()
         {
             //Arrange
-            _target = new Date(21, 7, 2021);
+             Date _target = new Date(21, 7, 2021);
             //Act
-            var actualResult = _target.DisplayDate();
-            string expectedResult = "7/21/2021";
+            var actual = _target.DisplayDate();
+            string expected = "7/21/2021";
             //Assert
-            Assert.AreEqual(expectedResult, actualResult);
+            Assert.AreEqual(expected, actual);
         }
     }
 }

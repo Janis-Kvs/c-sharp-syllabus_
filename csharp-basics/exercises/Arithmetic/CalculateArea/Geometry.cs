@@ -12,7 +12,7 @@ namespace CalculateArea
         {
             if (radius < 0)
             {
-                throw new NotImplementedException();
+                throw new ArgumentException("Only positive values accepted");
             }
             double circleArea = Math.Round(Math.PI * Math.Pow((double)radius, 2),2);
             return circleArea;
@@ -22,7 +22,7 @@ namespace CalculateArea
         {
             if (length < 0 || width < 0)
             {
-                throw new NotImplementedException();
+                throw new ArgumentException("Only positive values accepted");
             }
             double rectangleArea = Math.Round((double)length * (double)width, 2);
             return rectangleArea;
@@ -32,7 +32,7 @@ namespace CalculateArea
         {
             if (ground < 0 || h < 0)
             {
-                throw new NotImplementedException();
+                throw new ArgumentException("Only positive values accepted");
             }
             double triangleArea = Math.Round((double)ground * (double)h / 2, 2);
             return triangleArea;

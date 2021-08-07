@@ -1,9 +1,10 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 using System.Threading;
 
 namespace Account
 {
-    class Account
+    public class Account
     {
         private string _name;
         private double _balance;
@@ -14,6 +15,10 @@ namespace Account
         }
         public double Withdrawal(double amount)
         {
+            if (amount > _balance)
+            {
+                throw new ArgumentException("Withdrawal amount is larger than available balance");
+            }
             return _balance -= amount;
         }
         public double Deposit(double amount)
