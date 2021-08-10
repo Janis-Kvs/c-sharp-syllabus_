@@ -10,46 +10,46 @@ namespace Exercise1.Testss
         [DataRow(15, 3, true)]
         [DataRow(3, 4, false)]
         [DataRow(15, 4, true)]
-        public void Is15Test(int n1, int n2, bool b)
+        public void Is15Test(int number1, int number2, bool Is15)
         {
             //Act
-            var actual = Program.Is15(n1, n2);
+            var actual = Program.Is15(number1, number2);
             //Assert
-            Assert.AreEqual(b, actual);
+            Assert.AreEqual(Is15, actual);
         }
 
         [DataTestMethod]
         [DataRow(5, 10, true)]
         [DataRow(5, 5, false)]
-        public void IsSum15Test(int n1, int n2, bool b)
+        public void IsSum15Test(int number1, int number2, bool IsSum15)
         {
             //Act
-            var actual = Program.IsSum15(n1, n2);
+            var actual = Program.IsSum15(number1, number2);
             //Assert
-            Assert.AreEqual(b, actual);
+            Assert.AreEqual(IsSum15, actual);
         }
 
         [DataTestMethod]
         [DataRow(15, 30, true)]
         [DataRow(5, 15, false)]
-        public void IsDifference15Test(int n1, int n2, bool b)
+        public void IsDifference15Test(int number1, int number2, bool IsDifference15)
         {
             //Act
-            var actual = Program.IsDifference15(n1, n2);
+            var actual = Program.IsDifference15(number1, number2);
             //Assert
-            Assert.AreEqual(b, actual);
+            Assert.AreEqual(IsDifference15, actual);
         }
 
         [DataTestMethod]
         [DataRow(true, false, false, true)]
         [DataRow(false, false, false, false)]
         [DataRow(false, true, false, true)]
-        public void CheckTest(bool b1, bool b2, bool b3, bool b4)
+        public void CheckTest(bool boolean1, bool boolean2, bool boolean3, bool boolean4)
         {
             //Act
-            var actual = Program.Check(b1, b2, b3);
+            var actual = Program.Check(boolean1, boolean2, boolean3);
             //Assert
-            Assert.AreEqual(b4, actual);
+            Assert.AreEqual(boolean4, actual);
         }
     }
 }

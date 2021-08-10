@@ -7,7 +7,7 @@ namespace Exercise1.Tests
     public class ProductTests
     {
         [TestMethod]
-        public void PrintProductTest()
+        public void PrintProduct_NamePhonePriceAtStart134Amount34Given_StringRepresentationExpected()
         {
             //Arrange
             Product product = new Product("Phone", 134, 34);

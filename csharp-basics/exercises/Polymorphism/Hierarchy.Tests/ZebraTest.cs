@@ -7,7 +7,7 @@ namespace Hierarchy.Tests
     public class ZebraTest
     {
         [TestMethod]
-        public void MakeSound_BarkBarkExpected()
+        public void MakeSound_ValidZebra_BarkBarkExpected()
         {
             //Arrange
             Zebra zebra = new Zebra("Zeb", "Zebra",77, "Field");

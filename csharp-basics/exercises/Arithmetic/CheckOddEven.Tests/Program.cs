@@ -22,7 +22,7 @@ namespace CheckOddEven.Tests
         }
 
         [Test]
-        public void IsEven_2_OddExpected()
+        public void IsEven_3_OddExpected()
         {
             //Arrange 
             int number1 = 3;

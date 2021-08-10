@@ -8,16 +8,12 @@ namespace PhoneBook.Tests
     [TestClass]
     public class PhoneDirectoryTests
     {
+        PhoneDirectory phoneDirectory = new PhoneDirectory();
         [TestMethod]
         public void GetNumber_NamePeteris_Number21235462Expected()
         {
             //Arrange
-            PhoneDirectory phoneDirectory = new PhoneDirectory();
-            phoneDirectory.PutNumber("Janis", "26590735");
-            phoneDirectory.PutNumber("Evija", "24561238");
             phoneDirectory.PutNumber("Peteris", "21235462");
-            phoneDirectory.PutNumber("Karlis", "26545435");
-            phoneDirectory.PutNumber("Zane", "22246555");
             //Act
             var expected = 21235462;
             var actual = phoneDirectory.GetNumber("Peteris");
@@ -28,13 +24,6 @@ namespace PhoneBook.Tests
         [TestMethod]
         public void GetNumber_NameEmpty_NumberNullExpected()
         {
-            //Arrange
-            PhoneDirectory phoneDirectory = new PhoneDirectory();
-            phoneDirectory.PutNumber("Janis", "26590735");
-            phoneDirectory.PutNumber("Evija", "24561238");
-            phoneDirectory.PutNumber("Peteris", "21235462");
-            phoneDirectory.PutNumber("Karlis", "26545435");
-            phoneDirectory.PutNumber("Zane", "22246555");
             //Act
             int? expected = null;
             var actual = phoneDirectory.GetNumber("");
@@ -46,7 +35,6 @@ namespace PhoneBook.Tests
         public void ListNumbers_3Entries_Sorted3EntriesExpected()
         {
             //Arrange
-            PhoneDirectory phoneDirectory = new PhoneDirectory();
             phoneDirectory.PutNumber("Janis", "26590735");
             phoneDirectory.PutNumber("Evija", "24561238");
             phoneDirectory.PutNumber("Peteris", "21235462");
@@ -62,8 +50,6 @@ namespace PhoneBook.Tests
         [TestMethod]
         public void PutNumber_Janis26590735_Janis26590735Expected()
         {
-            //Arrange
-            PhoneDirectory phoneDirectory = new PhoneDirectory();
             //Act
             var expected = "Name: Janis, Phone number: 26590735\n";
             phoneDirectory.PutNumber("Janis", "26590735");

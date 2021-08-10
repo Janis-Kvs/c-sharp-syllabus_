@@ -7,7 +7,7 @@ namespace Hierarchy.Tests
     public class TigerTest
     {
         [TestMethod]
-        public void MakeSound_ROAARExpected()
+        public void MakeSound_ValidTiger_ROAARExpected()
         {
             //Arrange
             Tiger tiger = new Tiger("LielsKakis", "Tiger",113, "Savannah");

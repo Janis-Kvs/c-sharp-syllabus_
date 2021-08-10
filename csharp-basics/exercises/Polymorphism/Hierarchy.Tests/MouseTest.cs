@@ -7,7 +7,7 @@ namespace Hierarchy.Tests
     public class MouseTest
     {
         [TestMethod]
-        public void MakeSound_PiiiPiiiExpected()
+        public void MakeSound_ValidMouse_PiiiPiiiExpected()
         {
             //Arrange
             Mouse mouse = new Mouse("Pele", "Mouse",1, "Barn");

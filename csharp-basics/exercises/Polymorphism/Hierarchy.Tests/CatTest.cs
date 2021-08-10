@@ -7,7 +7,7 @@ namespace Hierarchy.Tests
     public class CatTest
     {
         [TestMethod]
-        public void MakeSound_MeowwwwExpected()
+        public void MakeSound_ValidCat_MeowwwwExpected()
         {
             //Arrange
             Cat cat = new Cat("Minka", "Cat",11, "Home", "Persian");

@@ -8,8 +8,12 @@ namespace GravityCalculator.Tests
         [TestMethod]
         public void GetPosition_FallingTime10Velocity2Position32_438_5Expected()
         {
+            //Arrange
+            var fallingTime = 10;
+            var initialVelocity = 2;
+            var initialPosition = 32;
             //Act
-           var actual = Program.GetPosition(10,2,32);
+            var actual = Program.GetPosition(fallingTime, initialVelocity, initialPosition);
             //Assert
             Assert.AreEqual(-438.5, actual);
         }
