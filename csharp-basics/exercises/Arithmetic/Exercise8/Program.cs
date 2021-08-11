@@ -2,38 +2,35 @@
 
 namespace Exercise8
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            TotalPay(7.5, 35);
-            TotalPay(8.2, 47);
-            TotalPay(10, 73);
+            Console.WriteLine(TotalPay(7.5, 35));
+            Console.WriteLine(TotalPay(8.2, 47));
+            Console.WriteLine(TotalPay(10, 73));
 
         }
 
-        static void TotalPay(double basePay, int hoursWorked)
+        public static string TotalPay(double basePay, int hoursWorked)
         {
             if (hoursWorked > 60)
             {
-                Console.WriteLine("Error: employee has worked more than 60 hours in a week.");
-                return;
+                return "Error: employee has worked more than 60 hours in a week.";
             }
-
-            if (basePay < 8)
+            else if (basePay < 8)
             {
-                Console.WriteLine("Error: employee base pay is less than $8.00 an hour");
-                return;
+                return "Error: employee base pay is less than $8.00 an hour";
             }
-
-            if (hoursWorked <= 40)
+            else if (hoursWorked <= 40)
             {
                 double totalPay = basePay * hoursWorked;
-                Console.WriteLine($"The total pay is: {totalPay}");
-            } else
+                return $"The total pay is: {totalPay}";
+            } 
+            else
             {
                 double totalPay = 40 * basePay + (hoursWorked - 40) *1.5 *basePay;
-                Console.WriteLine($"The total pay is: {totalPay}");
+                return $"The total pay is: {totalPay}";
             }
 
         }

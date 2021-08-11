@@ -4,32 +4,43 @@ using System.IO;
 
 namespace WordCount
 {
-    class Program
+    public class Program
     {
+        
         static void Main(string[] args)
         {
-            int charact = 0;
             string text = File.ReadAllText(@"../../lear.txt");
+            Console.WriteLine(CountLines(text));//Count lines
+            Console.WriteLine(CountWords(text));//Count words
+            Console.WriteLine(CountCharacters(text)); //Count characters
+            Console.ReadLine();
+        }
 
-            //Count lines
-            string[] linesArray = text.Split('\r','\n');
+        public static string CountLines(string text)
+        {
+            string[] linesArray = text.Split('\r', '\n');
             List<string> linesList = new List<string>(linesArray);
             linesList.RemoveAll(item => item == "");
-            Console.WriteLine("Lines = " + linesList.Count);
+            return "Lines = " + linesList.Count;
+        }
 
-            //Count words
+        public static string CountWords(string text)
+        {
             string[] wordsArray = text.Split(' ', '\'', '\r', '\n');
             List<string> wordsList = new List<string>(wordsArray);
             wordsList.RemoveAll(item => item == "");
-            Console.WriteLine("Words = " + wordsList.Count);
+            return "Words = " + wordsList.Count;
+        }
 
-            //Count characters
+        public static string CountCharacters(string text)
+        {
+            int charact = 0;
+            string[] linesArray = text.Split('\r', '\n');
             foreach (var ch in linesArray)
             {
                 charact += ch.Length;
             }
-            Console.WriteLine("Characters = " + charact);
-            Console.ReadLine();
+            return "Characters = " + charact;
         }
     }
 }

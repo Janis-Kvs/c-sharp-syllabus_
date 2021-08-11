@@ -19,10 +19,11 @@ namespace Hierarchy
             _foodEaten = 0;
         }
 
-        public abstract void MakeSound();
+        public abstract string MakeSound();
 
-        public virtual void Eat(Food food)
+        public virtual int Eat(Food food)
         {
+            return _foodEaten;
         }
     }
 }

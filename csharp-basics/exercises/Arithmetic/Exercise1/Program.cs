@@ -2,7 +2,7 @@
 
 namespace Exercise1
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -10,7 +10,27 @@ namespace Exercise1
             int.TryParse(Console.ReadLine(), out int number1);
             Console.WriteLine("Please input integer number 2: ");
             int.TryParse(Console.ReadLine(), out int number2);
-            Console.WriteLine((number1 == 15 || number2 == 15) || (number1 + number2 == 15 || Math.Abs(number1 - number2) == 15));
+            Console.WriteLine(CheckIfNumberIs15OrIsSum15OrIsDifference15(Is15(number1, number2), IsSum15(number1, number2), IsDifference15(number1, number2)));
+        }
+
+        public static bool Is15(int number1, int number2)
+        {
+            return (number1 == 15 || number2 == 15);
+        }
+
+        public static bool IsSum15(int number1, int number2)
+        {
+            return (number1 + number2 == 15);
+        }
+
+        public static bool IsDifference15(int number1, int number2)
+        {
+            return (Math.Abs(number1 - number2) == 15);
+        }
+
+        public static bool CheckIfNumberIs15OrIsSum15OrIsDifference15(bool b1, bool b2, bool b3)
+        {
+            return (b1 || (b2 || b3));
         }
     }
 }

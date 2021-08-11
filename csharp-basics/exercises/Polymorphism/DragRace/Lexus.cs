@@ -6,29 +6,32 @@ namespace DragRace
     {
         private int _currentSpeed = 0;
 
-        public void SpeedUp() 
+        public int SpeedUp()
         {
             _currentSpeed++;
+            return _currentSpeed;
         }
 
-        public void SlowDown() 
+        public int SlowDown()
         {
             _currentSpeed--;
+            return _currentSpeed;
         }
 
-        public int ShowCurrentSpeed() 
+        public int ShowCurrentSpeed()
         {
             return _currentSpeed;
         }
 
-        public void StartEngine()
+        public string StartEngine()
         {
-            Console.WriteLine("Rrrrrrr.....");
+            return "Rrrrrrr.....";
         }
 
-        public void UseNitrousOxideEngine()
+        public int UseNitrousOxideEngine()
         {
             _currentSpeed+=5;
+            return _currentSpeed;
         }
     }
 }

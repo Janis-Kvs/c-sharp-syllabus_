@@ -2,7 +2,7 @@
 
 namespace Exercise1
 {
-    class Product
+    public class Product
     {
         private string _name;
         private double _priceAtStart;
@@ -13,9 +13,19 @@ namespace Exercise1
             _priceAtStart = priceAtStart;
             _amountAtStart = amountAtStart;
         }
-        public void PrintProduct()
+        public double Amount
         {
-            Console.WriteLine($"{_name}, price: {_priceAtStart} EUR, amount: {_amountAtStart} units");
+            get { return _amountAtStart; }   // get method
+        }
+
+        public double Price
+        {
+            get { return _priceAtStart; }   // get method
+        }
+
+        public string PrintProduct()
+        {
+            return $"{_name}, price: {_priceAtStart} EUR, amount: {_amountAtStart} units";
         }
         public void ChangeQuantity(int quantity)
         {
